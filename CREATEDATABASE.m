@@ -1,14 +1,14 @@
 clear 
 clc
 pkg load image
-dirClassOne = './queimados/' ;
-dirClassZero = './bons/';
+dirClassOne = './Saudaveis/' ;
+dirClassZero = './fermentados/';
 
 addpath('./libsvm-3.22/matlab');
 filesClassOne = dir(strcat([dirClassOne, '*.jpg'])) ;
 m1 = size(filesClassOne, 1);
 
-filesClassZero = dir(strcat([dirClassZero, '*.jpg'])) ;
+filesClassZero = dir(strcat([dirClassZero, '*.png'])) ;
 m0 = size(filesClassZero, 1);
 X = zeros(m0+m1, 30000);
 for i=1:m1,

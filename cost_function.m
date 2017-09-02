@@ -11,7 +11,7 @@ function [J,  grad] = cost_function(nn_params, ...
 % Não altere!!
 Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
-size(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end))
+size(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end));
 Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
                  num_labels, (hidden_layer_size + 1));
 
@@ -51,7 +51,7 @@ a_2=[ones(m,1),a_2];
 z_3=a_2*Theta2';
 a_3=sigmoid(z_3);
 r_3=a_3-Y;
-r_2=(Theta2'*r_3').*[ones(m,1),sigmoidGradient(z_2)]';;
+r_2=(Theta2'*r_3').*[ones(m,1),sigmoidGradient(z_2)]';
 delta_1=r_2*a_1;
 delta_2=r_3'*a_2;
 Theta1_grad=(1/m)*delta_1(2:end, :)+(lambda/m)*Theta1;

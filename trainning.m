@@ -22,7 +22,7 @@ num_labels = 2;          % 10 classe, de 1 a 10
 
 fprintf('Carregando os Dados ...\n')
 
-load('parkSlotData1.mat');
+load('t1.mat');
 m = size(X, 1);
 
 %% =================== Treinando a rede neural ===================
@@ -55,4 +55,4 @@ Theta1 = reshape(nn_params(1:hidden_layer_size * (input_layer_size + 1)), ...
                  hidden_layer_size, (input_layer_size + 1));
 Theta2 = reshape(nn_params((1 + (hidden_layer_size * (input_layer_size + 1))):end), ...
                  num_labels, (hidden_layer_size + 1));
-save('parkSlotDataWeights.mat', 'Theta1', 'Theta2');
+save('P1.mat', 'Theta1', 'Theta2');

@@ -21,3 +21,6 @@ ________________________________________________________________________________
 #CARACTERÍSTICA
 1. Algoritmo de redes neurais simples
 2. Classifica imagens de grãos no padrão e fora do padrão
+
+#LICENÇAS
+Octave e seus pacotes(GPL)

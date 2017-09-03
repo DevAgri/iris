@@ -17,12 +17,7 @@ for i=1:m1,
 
         filename = char(filesClassOne(i).name);
         
-        im = double(imread(strcat([dirClassOne filename])));
-        %figure, imshow(im);
-        im = im/255;
-        %figure, imshow(im);
-        im= imresize(im, [100 100]);
-        %figure,imshow(im);
+        im = imagetonorm(filename);
         X(i,:) = im(:);
         
 end

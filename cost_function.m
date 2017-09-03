@@ -3,7 +3,7 @@ function [J,  grad] = cost_function(nn_params, ...
                                    hidden_layer_size, ...
                                    num_labels, ...
                                    X, y, lambda)
-%COST_FUNCTION implementa a função de custo da rede neural
+%COST_FUNCTION  a função de custo da rede neural
 %   [J grad] = COST_FUNCTON(nn_params, hidden_layer_size, num_labels, ...
 %   X, y, lambda) calcula a função de custo  e o gradiente da rede. 
 %
@@ -27,7 +27,10 @@ Theta2_grad = zeros(size(Theta2)); % gradiente de Theta2
 % Mudança de representação de y para um vetor Y
 I = eye(num_labels);
 Y = zeros(m, num_labels);
+size(Y);
+y;
 for i=1:m
+  y(i);
   Y(i, :)= I(y(i), :);
 end
 %==========FUNÇÃO DE CUSTO============
@@ -43,7 +46,6 @@ for i=1:m,
      end
      J=J/m;
     J=J+lambda/(2*m)*(sum(sum(Theta1.*Theta1)')+sum(sum(Theta2.*Theta2)));
-    % =============== Sua implementação deve ser vir aqui ==================
 a_1=[ones(m, 1),X];
 z_2=a_1*Theta1';
 a_2=sigmoid(z_2);

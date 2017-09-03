@@ -1,4 +1,4 @@
-function p = predict(Theta1, Theta2, X)
+function p= predict(Theta1, Theta2, X)
 %PREDICT classica um conjunto de amostras utilizando os parâmetros da 
 %rede (Theta1 e Theta2)
 %   p = PREDICT(Theta1, Theta2, X) devolve um vetor com a classse de 
